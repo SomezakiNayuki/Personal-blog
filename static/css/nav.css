@@ -24,6 +24,16 @@
     display: none !important
 }
 
+.m-fixed {
+    position: fixed !important;
+    z-index: 10 !important;
+}
+
+.m-right-bottom {
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
 @media screen and (max-width: 768px) {
     .m-mobile-hide {
         display: none !important;
