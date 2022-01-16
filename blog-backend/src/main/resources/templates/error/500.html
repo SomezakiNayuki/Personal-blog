@@ -1,10 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>500</title>
-</head>
-<body>
-    <h1>500</h1>
-</body>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head th:replace="_fragments :: head(~{::title})">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>500</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" href="../../static/css/nav.css">
+    </head>
+    <body>
+    
+        <!--Navigation-->
+        <nav class="ui yellow inverted vertical segment m-padded-tb-mini m-shadow-small" th:replace="_fragments :: menu(0)">
+            <div class="ui container" style="width: 1950px;">
+                <div class="ui yellow inverted secondary stackable menu">
+                    <h2 style="color:lightseagreen;font-size:280%;font-weight:bolder;" class="ui header item">DIZZY BOT BLOG</h2>
+                    <a href="#" class="active m-item item m-mobile-hide" style="font-size: x-large;"><i class="black home icon"></i>Home</a>
+                    <a href="#" class="m-item item m-mobile-hide" style="font-size: x-large;"><i class="black idea icon"></i>Classify</a>
+                    <a href="#" class="m-item item m-mobile-hide" style="font-size: x-large;"><i class="black tags icon"></i>Tags</a>
+                    <a href="#" class="m-item item m-mobile-hide" style="font-size: x-large;"><i class="black clone icon"></i>Archive</a>
+                    <a href="#" class="m-item item m-mobile-hide" style="font-size: x-large;"><i class="black info icon"></i>About me</a>
+                    <div class="item m-item m-mobile-hide">
+                        <div class="ui input icon">
+                            <input type="text" placeholder="search..." style="font-size: 150%;">
+                            <i class="search link icon" style="font-size: larger;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="ui menu toggle teal button m-mobile-show" style="position:absolute; top:10px;right:10px;">
+                <i class="sidebar icon"></i>
+            </a>
+        </nav>
+
+        <br>
+        <br>
+
+        <div class="ui container">
+            <div class="m-padded-tb-massive">
+                <div class="ui error message">
+                    <div class="ui container">
+                        <h2 style="font-size: 600%;">500</h2>
+                        <p style="font-size: xx-large;">Web server internal error</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!--Footnote-->
+        <footer class="ui yellow inverted vertical segment m-padded-tb-massive" th:replace="_fragments :: footer">
+            <div class="ui center aligned container" style="width:1700px;">
+                <div class="ui black stackable divided grid">
+                    <div class="three wide column">
+                        <img src="../../static/images/wechat-QI-code.jpg" th:src="@{/images/wechat-QI-code.jpg}" alt="" class="ui rounded image" style="width: 175px;">
+                    </div>
+                    <div class="three wide column">
+                        <h4 class="ui header" style="font-size: x-large;color:teal">Latest blogs</h4>
+                        <div class="ui inverted link list">
+                            <a href="" class="item" style="font-size: large;">NULL</a>
+                            <a href="" class="item" style="font-size: large;">NULL</a>
+                            <a href="" class="item" style="font-size: large;">NULL</a>
+                        </div>
+                    </div>
+                    <div class="three wide column">
+                        <h4 class="ui header" style="font-size: x-large;color:teal">Contact</h4>
+                        <div class="ui inverted link list">
+                            <a href="" class="item" style="font-size: large;">wechat: SomezakiNayuki</a>
+                            <a href="" class="item" style="font-size: large;">Email: 123456789@gmail.com</a>
+                        </div></div>
+                    <div class="seven wide column">
+                        <h4 class="ui header" style="font-size: x-large;color:teal">Dizzy Bot</h4>
+                        <div class="ui inverted link list">
+                            <a href="" class="item" style="font-size: x-large;">The strongest Artificial Idiot in the world</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui inverted section divider"></div>
+                <p style="font-size: 150%;">Copyright @ 2020-2021 DizzyBot</p>
+            </div>
+        </footer>
+
+    </body>
 </html>

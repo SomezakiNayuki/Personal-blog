@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/nav.css">
+</head>
+<body>
+
+    <!--Navigation-->
+    <nav class="ui yellow inverted vertical segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container" style="width: 1950px;">
+            <div class="ui yellow inverted secondary stackable menu">
+                <h2 style="color:lightseagreen;font-size:280%;font-weight:bolder;" class="ui header item">DIZZY BOT BLOG ADMIN</h2>
+                <a href="#" class="active m-item item m-mobile-hide" style="font-size: x-large;"><i class="black home icon"></i>Blog</a>
+                <a href="#" class="m-item item m-mobile-hide" style="font-size: x-large;"><i class="black idea icon"></i>Classify</a>
+                <a href="#" class="m-item item m-mobile-hide" style="font-size: x-large;"><i class="black tags icon"></i>Tags</a>
+                <div class="right menu m-item m-mobile-hide">
+                    <div class="ui drop dropdown item">
+                        <div class="text" style="font-size:large">
+                            <img src="https://unsplash.it/1096/1096?image=1078" alt="" class="ui avatar rounded image">
+                            Dizzy bot
+                        </div>
+                        <i class="dropdown icon" style="padding-right: 25px;"></i>
+                        <div class="menu">
+                            <a href="#" class="item">log off</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle teal button m-mobile-show" style="position:absolute; top:5px;right:5px;">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" class="item" style="font-size: x-large;">post</a>
+                <a href="#" class="active teal item" style="font-size: x-large;">list</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <div class="m-padded-tb-large">
+        <div class="ui container">
+            <form action="#" method="post" class="ui segment form">
+                <div class="inline fields">
+                    <div class="field">
+                        <input type="text" name="title" placeholder="title">
+                    </div>
+                    <div class="field">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="type">
+                            <i class="dropdown icon"></i>
+                            <div class="defualt text">Classification</div>
+                            <div class="menu">
+                                <div class="item" data-value="1">NULL</div>
+                                <div class="item" data-value="2">NULL</div>
+                                <div class="item" data-value="3">NULL</div>
+                                <div class="item" data-value="4">NULL</div>
+                                <div class="item" data-value="5">NULL</div>
+                                <div class="item" data-value="6">NULL</div>
+                                <div class="item" data-value="7">NULL</div>
+                                <div class="item" data-value="8">NULL</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="recommend" name="recommend">
+                            <label for="recommend">recommendation</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <button class="ui teal basic button"><i class="search icon"></i>search</button>
+                    </div>
+                </div>
+            </form>
+            <table class="ui celled table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>title</th>
+                        <th>type</th>
+                        <th>recommendation</th>
+                        <th>update time</th>
+                        <th>operation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>Yes</td>
+                        <td>2021-12-23 23:59</td>
+                        <td>
+                            <a href="#" class="ui teal button">edit</a>
+                            <a href="#" class="ui red button">edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>Yes</td>
+                        <td>2021-12-23 23:59</td>
+                        <td>
+                            <a href="#" class="ui teal button">edit</a>
+                            <a href="#" class="ui red button">edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>Yes</td>
+                        <td>2021-12-23 23:59</td>
+                        <td>
+                            <a href="#" class="ui teal button">edit</a>
+                            <a href="#" class="ui red button">edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>Yes</td>
+                        <td>2021-12-23 23:59</td>
+                        <td>
+                            <a href="#" class="ui teal button">edit</a>
+                            <a href="#" class="ui red button">edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>Yes</td>
+                        <td>2021-12-23 23:59</td>
+                        <td>
+                            <a href="#" class="ui teal button">edit</a>
+                            <a href="#" class="ui red button">edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>Yes</td>
+                        <td>2021-12-23 23:59</td>
+                        <td>
+                            <a href="#" class="ui teal button">edit</a>
+                            <a href="#" class="ui red button">edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>Yes</td>
+                        <td>2021-12-23 23:59</td>
+                        <td>
+                            <a href="#" class="ui teal button">edit</a>
+                            <a href="#" class="ui red button">edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                        <td>Yes</td>
+                        <td>2021-12-23 23:59</td>
+                        <td>
+                            <a href="#" class="ui teal button">edit</a>
+                            <a href="#" class="ui red button">edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="6">
+                            <div class="ui pagination menu">
+                                <a class="item">last page</a>
+                                <a class="item">next page</a>
+                            </div>
+                            <a href="#" class="ui right floated teal basic button">add</a>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!--<form class="ui reply form">
+        <div class="field">
+          <textarea></textarea>
+        </div>
+        <div class="ui blue labeled submit icon button">
+          <i class="icon edit"></i> Add Reply
+        </div>
+      </form>-->
+
+    <br>
+    <br>
+    <br>
+
+    <!--Footnote-->
+    <footer class="ui yellow inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container" style="width:1700px;">
+            <div class="ui black stackable divided grid">
+                <div class="three wide column">
+                    <img src="../../static/images/wechat-QI-code.jpg" alt="" class="ui rounded image" style="width: 175px;">
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui header" style="font-size: x-large;color:teal">Latest blogs</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item" style="font-size: large;">NULL</a>
+                        <a href="" class="item" style="font-size: large;">NULL</a>
+                        <a href="" class="item" style="font-size: large;">NULL</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui header" style="font-size: x-large;color:teal">Contact</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item" style="font-size: large;">wechat: SomezakiNayuki</a>
+                        <a href="" class="item" style="font-size: large;">Email: 123456789@gmail.com</a>
+                    </div></div>
+                <div class="seven wide column">
+                    <h4 class="ui header" style="font-size: x-large;color:teal">Dizzy Bot</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item" style="font-size: x-large;">The strongest Artificial Idiot in the world</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p style="font-size: 150%;">Copyright @ 2020-2021 DizzyBot</p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+<script>
+    $('.menu.toggle').click(function() {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+</script>
+</body>
+</html>
