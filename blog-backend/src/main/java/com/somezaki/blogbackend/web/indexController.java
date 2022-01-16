@@ -11,11 +11,7 @@ public class indexController {
     @GetMapping("/")
     public String index() {
         // int i = 9 / 0;
-        String blog = null;
-        if (blog == null) {
-            throw new NotFoundException("blog do not exist");
-        }
-        return "index";
+        throw new NotFoundException("blog do not exist");
     }
 
 }
