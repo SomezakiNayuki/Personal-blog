@@ -20,7 +20,7 @@ public class User {
     @GeneratedValue
     private Long id;
     private String nickname;
-    private String userName;
+    private String username;
     private String password;
     private String email;
     private String avatar;
@@ -52,12 +52,12 @@ public class User {
         this.nickname = nickname;
     }
 
-    public String getUserName() {
-        return this.userName;
+    public String getusername() {
+        return this.username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setusername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -121,7 +121,7 @@ public class User {
         return "{" +
                 " id='" + getId() + "'" +
                 ", nickname='" + getNickname() + "'" +
-                ", userName='" + getUserName() + "'" +
+                ", username='" + getusername() + "'" +
                 ", password='" + getPassword() + "'" +
                 ", email='" + getEmail() + "'" +
                 ", avatar='" + getAvatar() + "'" +
