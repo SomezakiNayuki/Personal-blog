@@ -757,3 +757,182 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 2022-01-21 00:35:16.860  INFO 18732 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-01-21 00:35:16.861  INFO 18732 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
 2022-01-21 00:35:16.887  INFO 18732 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2022-01-21 03:07:22.093  INFO 18260 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : Starting BlogBackendApplication using Java 11.0.13 on LAPTOP-88ERCD1Q with PID 18260 (D:\Coding program\self-learning\blog\blog-backend\target\classes started by 25026 in D:\Coding program\self-learning\blog\blog-backend)
+2022-01-21 03:07:22.095 DEBUG 18260 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-01-21 03:07:22.096  INFO 18260 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : The following profiles are active: dev
+2022-01-21 03:07:22.178  INFO 18260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-21 03:07:22.179  INFO 18260 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-21 03:07:23.145  INFO 18260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-21 03:07:23.230  INFO 18260 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+2022-01-21 03:07:25.735  INFO 18260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-21 03:07:25.758  INFO 18260 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-21 03:07:25.759  INFO 18260 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-21 03:07:25.944  INFO 18260 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-21 03:07:25.945  INFO 18260 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3764 ms
+2022-01-21 03:07:26.462  INFO 18260 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-21 03:07:26.593  INFO 18260 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-21 03:07:26.922  INFO 18260 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-21 03:07:27.109  INFO 18260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-21 03:07:27.707  INFO 18260 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-21 03:07:27.760  INFO 18260 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-21 03:07:29.007  INFO 18260 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-21 03:07:29.018  INFO 18260 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-21 03:07:30.405  WARN 18260 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-21 03:07:30.974  INFO 18260 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-21 03:07:31.640  INFO 18260 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-21 03:07:31.716  INFO 18260 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-21 03:07:31.741  INFO 18260 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : Started BlogBackendApplication in 10.474 seconds (JVM running for 11.434)
+2022-01-21 03:07:47.359  INFO 18260 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-21 03:07:47.366  INFO 18260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-21 03:07:47.416  INFO 18260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-21 03:09:22.519  INFO 3116 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : Starting BlogBackendApplication using Java 11.0.13 on LAPTOP-88ERCD1Q with PID 3116 (D:\Coding program\self-learning\blog\blog-backend\target\classes started by 25026 in D:\Coding program\self-learning\blog\blog-backend)
+2022-01-21 03:09:22.521 DEBUG 3116 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-01-21 03:09:22.522  INFO 3116 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : The following profiles are active: dev
+2022-01-21 03:09:22.591  INFO 3116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-21 03:09:22.591  INFO 3116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-21 03:09:23.320  INFO 3116 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-21 03:09:23.382  INFO 3116 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+2022-01-21 03:09:25.375  INFO 3116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-21 03:09:25.390  INFO 3116 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-21 03:09:25.390  INFO 3116 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-21 03:09:25.538  INFO 3116 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-21 03:09:25.539  INFO 3116 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2946 ms
+2022-01-21 03:09:26.012  INFO 3116 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-21 03:09:26.109  INFO 3116 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-21 03:09:26.372  INFO 3116 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-21 03:09:26.525  INFO 3116 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-21 03:09:26.968  INFO 3116 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-21 03:09:27.012  INFO 3116 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-21 03:09:27.987  INFO 3116 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-21 03:09:27.997  INFO 3116 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-21 03:09:29.179  WARN 3116 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-21 03:09:29.799  INFO 3116 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-21 03:09:30.478  INFO 3116 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-21 03:09:30.562  INFO 3116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-21 03:09:30.593  INFO 3116 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : Started BlogBackendApplication in 8.944 seconds (JVM running for 9.841)
+2022-01-21 03:09:39.727  INFO 3116 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-21 03:09:39.731  INFO 3116 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-21 03:09:39.733  INFO 3116 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-21 03:09:39.792  INFO 3116 --- [http-nio-8080-exec-1] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.indexController.index', args='[null, null]} 
+2022-01-21 03:09:39.810  INFO 3116 --- [http-nio-8080-exec-1] c.somezaki.blogbackend.aspect.LogAspect  : Result : index 
+2022-01-21 03:09:50.652  WARN 3116 --- [http-nio-8080-exec-7] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [823] milliseconds.
+2022-01-21 03:11:18.227  INFO 3116 --- [http-nio-8080-exec-4] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:11:18.297  INFO 3116 --- [http-nio-8080-exec-4] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:11:43.750  INFO 3116 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-21 03:11:43.754  INFO 3116 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-21 03:11:43.795  INFO 3116 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-21 03:14:34.396  INFO 3848 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : Starting BlogBackendApplication using Java 11.0.13 on LAPTOP-88ERCD1Q with PID 3848 (D:\Coding program\self-learning\blog\blog-backend\target\classes started by 25026 in D:\Coding program\self-learning\blog\blog-backend)
+2022-01-21 03:14:34.398 DEBUG 3848 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : Running with Spring Boot v2.6.2, Spring v5.3.14
+2022-01-21 03:14:34.398  INFO 3848 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : The following profiles are active: dev
+2022-01-21 03:14:34.452  INFO 3848 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-21 03:14:34.452  INFO 3848 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-21 03:14:35.153  INFO 3848 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-21 03:14:35.222  INFO 3848 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+2022-01-21 03:14:37.103  INFO 3848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-21 03:14:37.117  INFO 3848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-21 03:14:37.118  INFO 3848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-21 03:14:37.237  INFO 3848 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-21 03:14:37.238  INFO 3848 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2784 ms
+2022-01-21 03:14:37.580  INFO 3848 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-21 03:14:37.651  INFO 3848 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-21 03:14:37.839  INFO 3848 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-21 03:14:37.951  INFO 3848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-21 03:14:38.310  INFO 3848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-21 03:14:38.350  INFO 3848 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-01-21 03:14:39.144  INFO 3848 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-21 03:14:39.153  INFO 3848 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-21 03:14:40.024  WARN 3848 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-21 03:14:40.441  INFO 3848 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-21 03:14:40.972  INFO 3848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-21 03:14:41.032  INFO 3848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-21 03:14:41.048  INFO 3848 --- [restartedMain] c.s.blogbackend.BlogBackendApplication   : Started BlogBackendApplication in 7.312 seconds (JVM running for 7.949)
+2022-01-21 03:14:42.192  INFO 3848 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-21 03:14:42.195  INFO 3848 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-21 03:14:42.197  INFO 3848 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-21 03:26:06.604  INFO 3848 --- [http-nio-8080-exec-7] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:26:06.680  INFO 3848 --- [http-nio-8080-exec-7] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:26:52.917  INFO 3848 --- [http-nio-8080-exec-6] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:26:52.937  INFO 3848 --- [http-nio-8080-exec-6] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:27:06.861  INFO 3848 --- [http-nio-8080-exec-7] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:27:06.867  INFO 3848 --- [http-nio-8080-exec-7] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:27:23.517  INFO 3848 --- [http-nio-8080-exec-10] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:27:23.523  INFO 3848 --- [http-nio-8080-exec-10] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:27:44.357  INFO 3848 --- [http-nio-8080-exec-6] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:27:44.364  INFO 3848 --- [http-nio-8080-exec-6] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:28:08.682  INFO 3848 --- [http-nio-8080-exec-6] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:28:08.688  INFO 3848 --- [http-nio-8080-exec-6] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:28:20.395  INFO 3848 --- [http-nio-8080-exec-3] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:28:20.414  INFO 3848 --- [http-nio-8080-exec-3] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:30:01.634  INFO 3848 --- [http-nio-8080-exec-7] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:30:01.640  INFO 3848 --- [http-nio-8080-exec-7] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:30:06.091  INFO 3848 --- [http-nio-8080-exec-8] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:30:06.108  INFO 3848 --- [http-nio-8080-exec-8] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:30:16.524  INFO 3848 --- [http-nio-8080-exec-1] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:30:16.531  INFO 3848 --- [http-nio-8080-exec-1] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:30:22.478  INFO 3848 --- [http-nio-8080-exec-10] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 1, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:30:22.528  INFO 3848 --- [http-nio-8080-exec-10] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:30:24.502  INFO 3848 --- [http-nio-8080-exec-9] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:30:24.515  INFO 3848 --- [http-nio-8080-exec-9] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:30:25.843  INFO 3848 --- [http-nio-8080-exec-2] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:30:25.849  INFO 3848 --- [http-nio-8080-exec-2] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:30:26.728  INFO 3848 --- [http-nio-8080-exec-3] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:30:26.735  INFO 3848 --- [http-nio-8080-exec-3] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:30:29.068  INFO 3848 --- [http-nio-8080-exec-7] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:30:29.083  INFO 3848 --- [http-nio-8080-exec-7] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:30:31.224  INFO 3848 --- [http-nio-8080-exec-2] c.somezaki.blogbackend.aspect.LogAspect  : Request : {url='http://127.0.0.1:8080/admin/types', ip='127.0.0.1', classMethod='com.somezaki.blogbackend.web.TypeController.types', args='[Page request [number: 0, size 10, sort: id: DESC], {}]} 
+2022-01-21 03:30:31.239  INFO 3848 --- [http-nio-8080-exec-2] c.somezaki.blogbackend.aspect.LogAspect  : Result : admin/types 
+2022-01-21 03:30:38.112 ERROR 3848 --- [http-nio-8080-exec-1] c.s.b.h.ControllerExceptionHandler       : Request URL : http://127.0.0.1:8080/admin/blogs, Exception : {}
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:253)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1261)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1043)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2022-01-21 03:30:38.138  WARN 3848 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2022-01-21 03:34:14.343  INFO 3848 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-21 03:34:14.354  INFO 3848 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-21 03:34:14.410  INFO 3848 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

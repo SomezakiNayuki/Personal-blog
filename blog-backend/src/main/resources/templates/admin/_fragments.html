@@ -18,9 +18,9 @@
         <div class="ui container" style="width: 1950px;">
             <div class="ui yellow inverted secondary stackable menu">
                 <h2 style="color:lightseagreen;font-size:280%;font-weight:bolder;" class="ui header item">DIZZY BOT BLOG ADMIN</h2>
-                <a href="#" class="m-item item m-mobile-hide" style="font-size: x-large;" th:classappend="${n==1} ? 'active'"><i class="black home icon"></i>Blog</a>
-                <a href="#" class="m-item item m-mobile-hide" style="font-size: x-large;" th:classappend="${n==2} ? 'active'"><i class="black idea icon"></i>Classify</a>
-                <a href="#" class="m-item item m-mobile-hide" style="font-size: x-large;" th:classappend="${n==3} ? 'active'"><i class="black tags icon"></i>Tags</a>
+                <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide" style="font-size: x-large;" th:classappend="${n==1} ? 'active'"><i class="black home icon"></i>Blog</a>
+                <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide" style="font-size: x-large;" th:classappend="${n==2} ? 'active'"><i class="black idea icon"></i>Classify</a>
+                <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide" style="font-size: x-large;" th:classappend="${n==3} ? 'active'"><i class="black tags icon"></i>Tags</a>
                 <div class="right menu m-item m-mobile-hide">
                     <div class="ui drop dropdown item">
                         <div class="text" style="font-size:large">
