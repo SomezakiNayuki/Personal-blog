@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "t_tag")
@@ -16,6 +17,7 @@ public class Tag {
     @Id
     @GeneratedValue
     private Long id;
+    @NotEmpty(message = "tag name cannot be empty")
     private String name;
 
     @ManyToMany(mappedBy = "tags")
