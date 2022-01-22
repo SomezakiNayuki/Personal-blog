@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "t_type")
@@ -16,6 +17,7 @@ public class Type {
     @Id
     @GeneratedValue
     private Long id;
+    @NotEmpty(message = "class name cannot be empty")
     private String name;
 
     @OneToMany(mappedBy = "type")

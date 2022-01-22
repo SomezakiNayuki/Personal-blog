@@ -38,8 +38,8 @@
     <div class="ui attached pointing menu">
         <div class="ui container">
             <div class="right menu">
-                <a href="#" class="item" style="font-size: x-large;">post</a>
-                <a href="#" class="active teal item" style="font-size: x-large;">list</a>
+                <a href="#" class="item" style="font-size: x-large;" th:href="@{/admin/types/input}">new</a>
+                <a href="#" class="active teal item" style="font-size: x-large;" th:href="@{/admin/types}">list</a>
             </div>
         </div>
     </div>
@@ -47,6 +47,11 @@
     <!--Content-->
     <div class="m-padded-tb-large">
         <div class="ui container">
+            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                <i class="close icon"></i>
+                <div class="header">Attention:</div>
+                <p th:text="${message}">operation success</p>
+            </div>
             <table class="ui celled table">
                 <thead>
                     <tr>
@@ -68,9 +73,9 @@
                 <tfoot>
                     <tr>
                         <th colspan="6">
-                            <div class="ui pagination menu">
-                                <a class="item" th:href="@{/admin/types(page=${page.number}-1)}">last page</a>
-                                <a class="item" th:href="@{/admin/types(page=${page.number}+1)}">next page</a>
+                            <div class="ui pagination menu" th:if="${page.totalPages}>1">
+                                <a class="item" th:href="@{/admin/types(page=${page.number}-1)}" th:unless="${page.first}">last page</a>
+                                <a class="item" th:href="@{/admin/types(page=${page.number}+1)}" th:unless="${page.last}">next page</a>
                             </div>
                             <a href="#" class="ui right floated teal basic button" th:href="@{/admin/types/input}">add</a>
                         </th>
@@ -89,6 +94,13 @@
         </div>
       </form>-->
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
@@ -137,6 +149,10 @@
     });
     $('.ui.dropdown').dropdown({
         on : 'hover'
+    });
+
+    $('.message .close').on('click', function () {
+        $(this).closest('.message').transition('fade');
     });
 </script>
 </body>

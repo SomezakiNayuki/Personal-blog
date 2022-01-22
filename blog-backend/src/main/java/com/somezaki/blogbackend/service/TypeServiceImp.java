@@ -28,6 +28,11 @@ public class TypeServiceImp implements TypeService {
     }
 
     @Transactional
+    public Type getTypeByName(String name) {
+        return typeRepository.findByName(name);
+    }
+
+    @Transactional
     public Page<Type> listType(Pageable pageable) {
         return typeRepository.findAll(pageable);
     }
