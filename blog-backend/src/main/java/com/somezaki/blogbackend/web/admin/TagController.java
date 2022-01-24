@@ -1,9 +1,4 @@
-package com.somezaki.blogbackend.web;
-
-import javax.validation.Valid;
-
-import com.somezaki.blogbackend.po.Type;
-import com.somezaki.blogbackend.service.TypeService;
+package com.somezaki.blogbackend.web.admin;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -18,54 +13,58 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
+
+import com.somezaki.blogbackend.po.Tag;
+import com.somezaki.blogbackend.service.TagService;
+
 @Controller
 @RequestMapping("/admin")
-public class TypeController {
+public class TagController {
 
     @Autowired
-    private TypeService typeService;
+    private TagService tagService;
 
-    @GetMapping("/types")
-    public String types(
-            @PageableDefault(size = 10, sort = { "id" }, direction = Sort.Direction.DESC) Pageable pageable,
+    @GetMapping("/tags")
+    public String tags(@PageableDefault(size = 10, sort = { "id" }, direction = Sort.Direction.DESC) Pageable pageable,
             Model model) {
-        model.addAttribute("page", typeService.listType(pageable));
-        return "admin/types";
+        model.addAttribute("page", tagService.listTag(pageable));
+        return "admin/tags";
     }
 
-    @GetMapping("/types/input")
+    @GetMapping("/tags/input")
     public String input(Model model) {
-        model.addAttribute("type", new Type());
-        return "admin/types-input";
+        model.addAttribute("tag", new Tag());
+        return "admin/tags-input";
     }
 
-    @GetMapping("/types/{id}/input")
+    @GetMapping("/tags/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
-        model.addAttribute("type", typeService.getType(id));
-        return "admin/types-input";
+        model.addAttribute("tag", tagService.getTag(id));
+        return "admin/tags-input";
     }
 
-    @GetMapping("/types/{id}/delete")
+    @GetMapping("/tags/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes attributes) {
-        typeService.deleteType(id);
+        tagService.deleteTag(id);
         attributes.addFlashAttribute("message", "delete success");
-        return "redirect:/admin/types";
+        return "redirect:/admin/tags";
     }
 
-    @PostMapping("/types")
-    public String post(@Valid Type type, BindingResult result, RedirectAttributes attributes) {
+    @PostMapping("/tags")
+    public String post(@Valid Tag tag, BindingResult result, RedirectAttributes attributes) {
 
-        Type t = typeService.getTypeByName(type.getName());
+        Tag t = tagService.getTagByName(tag.getName());
 
         if (t != null) {
-            result.rejectValue("name", "nameError", "class duplication not allowed");
+            result.rejectValue("name", "nameError", "tag duplication not allowed");
         }
 
         if (result.hasErrors()) {
-            return "admin/types-input";
+            return "admin/tags-input";
         }
 
-        Type tt = typeService.saveType(type);
+        Tag tt = tagService.saveTag(tag);
 
         if (tt == null) {
             attributes.addFlashAttribute("message", "operation failed");
@@ -73,25 +72,25 @@ public class TypeController {
             attributes.addFlashAttribute("message", "operation success");
         }
 
-        return "redirect:/admin/types";
+        return "redirect:/admin/tags";
 
     }
 
-    @PostMapping("/types/{id}")
-    public String editpost(@Valid Type type, BindingResult result, @PathVariable Long id,
+    @PostMapping("/tags/{id}")
+    public String editPost(@Valid Tag tag, BindingResult result, @PathVariable Long id,
             RedirectAttributes attributes) {
 
-        Type t = typeService.getTypeByName(type.getName());
+        Tag t = tagService.getTagByName(tag.getName());
 
         if (t != null) {
-            result.rejectValue("name", "nameError", "class duplication not allowed");
+            result.rejectValue("name", "nameError", "tag duplication not allowed");
         }
 
         if (result.hasErrors()) {
-            return "admin/types-input";
+            return "admin/tags-input";
         }
 
-        Type tt = typeService.updateType(id, type);
+        Tag tt = tagService.updateTag(id, tag);
 
         if (tt == null) {
             attributes.addFlashAttribute("message", "operation failed");
@@ -99,7 +98,7 @@ public class TypeController {
             attributes.addFlashAttribute("message", "operation success");
         }
 
-        return "redirect:/admin/types";
+        return "redirect:/admin/tags";
 
     }
 

@@ -1,5 +1,7 @@
 package com.somezaki.blogbackend.service;
 
+import java.util.List;
+
 import com.somezaki.blogbackend.dao.TypeRepository;
 import com.somezaki.blogbackend.exception.NotFoundException;
 import com.somezaki.blogbackend.po.Type;
@@ -35,6 +37,11 @@ public class TypeServiceImp implements TypeService {
     @Transactional
     public Page<Type> listType(Pageable pageable) {
         return typeRepository.findAll(pageable);
+    }
+
+    @Transactional
+    public List<Type> listType() {
+        return typeRepository.findAll();
     }
 
     @Transactional

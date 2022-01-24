@@ -47,25 +47,19 @@
     <!--Content-->
     <div class="m-padded-tb-large">
         <div class="ui container">
-            <form action="#" method="post" class="ui segment form">
+            <div class="ui secondary segment form">
+                <input type="hidden" name="page">
                 <div class="inline fields">
                     <div class="field">
                         <input type="text" name="title" placeholder="title">
                     </div>
                     <div class="field">
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="type">
+                            <input type="hidden" name="typeId">
                             <i class="dropdown icon"></i>
                             <div class="defualt text">Classification</div>
                             <div class="menu">
-                                <div class="item" data-value="1">NULL</div>
-                                <div class="item" data-value="2">NULL</div>
-                                <div class="item" data-value="3">NULL</div>
-                                <div class="item" data-value="4">NULL</div>
-                                <div class="item" data-value="5">NULL</div>
-                                <div class="item" data-value="6">NULL</div>
-                                <div class="item" data-value="7">NULL</div>
-                                <div class="item" data-value="8">NULL</div>
+                                <div class="item" data-value="1" th:each="type : ${types}" th:data-value="${type.id}" th:text="${type.name}">NULL</div>
                             </div>
                         </div>
                     </div>
@@ -76,123 +70,48 @@
                         </div>
                     </div>
                     <div class="field">
-                        <button class="ui teal basic button"><i class="search icon"></i>search</button>
+                        <button  type="button" id="search-button" class="ui mini teal basic button"><i class="search icon"></i>search</button>
                     </div>
                 </div>
-            </form>
-            <table class="ui celled table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>title</th>
-                        <th>type</th>
-                        <th>recommendation</th>
-                        <th>update time</th>
-                        <th>operation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td>Yes</td>
-                        <td>2021-12-23 23:59</td>
-                        <td>
-                            <a href="#" class="ui teal button">edit</a>
-                            <a href="#" class="ui red button">delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td>Yes</td>
-                        <td>2021-12-23 23:59</td>
-                        <td>
-                            <a href="#" class="ui teal button">edit</a>
-                            <a href="#" class="ui red button">delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td>Yes</td>
-                        <td>2021-12-23 23:59</td>
-                        <td>
-                            <a href="#" class="ui teal button">edit</a>
-                            <a href="#" class="ui red button">delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td>Yes</td>
-                        <td>2021-12-23 23:59</td>
-                        <td>
-                            <a href="#" class="ui teal button">edit</a>
-                            <a href="#" class="ui red button">delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td>Yes</td>
-                        <td>2021-12-23 23:59</td>
-                        <td>
-                            <a href="#" class="ui teal button">edit</a>
-                            <a href="#" class="ui red button">delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td>Yes</td>
-                        <td>2021-12-23 23:59</td>
-                        <td>
-                            <a href="#" class="ui teal button">edit</a>
-                            <a href="#" class="ui red button">delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td>Yes</td>
-                        <td>2021-12-23 23:59</td>
-                        <td>
-                            <a href="#" class="ui teal button">edit</a>
-                            <a href="#" class="ui red button">delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td>Yes</td>
-                        <td>2021-12-23 23:59</td>
-                        <td>
-                            <a href="#" class="ui teal button">edit</a>
-                            <a href="#" class="ui red button">delete</a>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th colspan="6">
-                            <div class="ui pagination menu">
-                                <a class="item">last page</a>
-                                <a class="item">next page</a>
-                            </div>
-                            <a href="#" class="ui right floated teal basic button">add</a>
-                        </th>
-                    </tr>
-                </tfoot>
-            </table>
+            </div>
+            <div id="table-container">
+                <table class="ui celled teal table" th:fragment="blogList">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>title</th>
+                            <th>type</th>
+                            <th>recommendation</th>
+                            <th>update time</th>
+                            <th>operation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="blog,iterStat : ${page.content}">
+                            <td th:text="${iterStat.count}">1</td>
+                            <td th:text="${blog.title}">NULL</td>
+                            <td th:text="${blog.type.name}">NULL</td>
+                            <td th:text="${blog.recommendation} ? 'Yes' : 'No'">Yes</td>
+                            <td th:text="${blog.updateTime}">2021-12-23 23:59</td>
+                            <td>
+                                <a href="#" class="ui teal button" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}">edit</a>
+                                <a href="#" class="ui red button" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}">delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="6">
+                                <div class="ui pagination menu" th:if="${page.totalPages}>1">
+                                    <a class="item" onclick="page(this)" th:attr="data-page=${page.number}-1" th:unless="${page.first}">last page</a>
+                                    <a class="item" onclick="page(this)" th:attr="data-page=${page.number}+1" th:unless="${page.last}">next page</a>
+                                </div>
+                                <a href="#" class="ui right floated teal basic button">add</a>
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -205,6 +124,8 @@
         </div>
       </form>-->
 
+    <br>
+    <br>
     <br>
     <br>
     <br>
@@ -254,6 +175,24 @@
     $('.ui.dropdown').dropdown({
         on : 'hover'
     });
+    $("#search-button").click(function () {
+        $("[name='page']").val(0);
+        loadData();
+    });
+
+    function page(obj) {
+        $("[name='page']").val($(obj).data("page"));
+        loadData();
+    }
+
+    function loadData() {
+        $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search",{
+            title : $("[name='title']").val(),
+            typeId : $("[name='typeId']").val(),
+            recommend : $("[name='recommend']").prop('checked'),
+            page : $("[name='page']").val()
+        });
+    }
 </script>
 </body>
 </html>

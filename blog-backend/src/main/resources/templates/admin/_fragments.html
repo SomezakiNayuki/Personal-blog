@@ -24,8 +24,8 @@
                 <div class="right menu m-item m-mobile-hide">
                     <div class="ui drop dropdown item">
                         <div class="text" style="font-size:large">
-                            <img src="https://unsplash.it/1096/1096?image=1078" alt="" class="ui avatar rounded image">
-                            Dizzy bot
+                            <img src="https://unsplash.it/1096/1096?image=1078" alt="" class="ui avatar rounded image" th:src="@{${session.user.avatar}}">
+                            <span th:text="${session.user.nickname}">Dizzy bot</span>
                         </div>
                         <i class="dropdown icon" style="padding-right: 25px;"></i>
                         <div class="menu">

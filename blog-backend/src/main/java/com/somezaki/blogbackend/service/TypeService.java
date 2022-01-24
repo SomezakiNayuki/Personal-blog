@@ -1,5 +1,7 @@
 package com.somezaki.blogbackend.service;
 
+import java.util.List;
+
 import com.somezaki.blogbackend.po.Type;
 
 import org.springframework.data.domain.Page;
@@ -14,6 +16,8 @@ public interface TypeService {
     public Type getTypeByName(String name);
 
     public Page<Type> listType(Pageable pageable);
+
+    public List<Type> listType();
 
     public Type updateType(Long id, Type type);
 
