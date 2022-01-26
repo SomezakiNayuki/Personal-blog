@@ -1,5 +1,8 @@
 package com.somezaki.blogbackend.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.somezaki.blogbackend.dao.TagRepository;
 import com.somezaki.blogbackend.exception.NotFoundException;
 import com.somezaki.blogbackend.po.Tag;
@@ -35,6 +38,34 @@ public class TagServiceImp implements TagService {
     @Transactional
     public Page<Tag> listTag(Pageable pageable) {
         return tagRepository.findAll(pageable);
+    }
+
+    @Transactional
+    public List<Tag> listTag() {
+        return tagRepository.findAll();
+    }
+
+    @Transactional
+    public List<Tag> listTag(String ids) {
+        return tagRepository.findAllById(converToList(ids));
+    }
+
+    private List<Long> converToList(String ids) {
+
+        List<Long> list = new ArrayList<>();
+
+        if ("".equals(ids) && ids != null) {
+
+            String[] idArray = ids.split(",");
+
+            for (int i = 0; i < idArray.length; i++) {
+                list.add(Long.valueOf(idArray[i]));
+            }
+
+        }
+
+        return list;
+
     }
 
     @Transactional

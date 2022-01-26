@@ -1,6 +1,11 @@
 package com.somezaki.blogbackend.web.admin;
 
+import javax.servlet.http.HttpSession;
+
+import com.somezaki.blogbackend.po.Blog;
+import com.somezaki.blogbackend.po.User;
 import com.somezaki.blogbackend.service.BlogService;
+import com.somezaki.blogbackend.service.TagService;
 import com.somezaki.blogbackend.service.TypeService;
 import com.somezaki.blogbackend.vo.BlogQuery;
 
@@ -13,6 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/admin")
@@ -23,6 +29,9 @@ public class BlogController {
 
     @Autowired
     private TypeService typeService;
+
+    @Autowired
+    private TagService tagService;
 
     @GetMapping("/blogs")
     public String blogs(
@@ -39,6 +48,33 @@ public class BlogController {
             BlogQuery blog, Model model) {
         model.addAttribute("page", blogService.listBlog(pageable, blog));
         return "admin/blogs :: blogList";
+    }
+
+    @GetMapping("/blogs/input")
+    public String input(Model model) {
+        model.addAttribute("types", typeService.listType());
+        model.addAttribute("tags", tagService.listTag());
+        model.addAttribute("blog", new Blog());
+        return "/admin/blogs-input";
+    }
+
+    @PostMapping("/blogs")
+    public String post(Blog blog, RedirectAttributes attributes, HttpSession session) {
+
+        blog.setUser((User) session.getAttribute("user"));
+        blog.setType(typeService.getType(blog.getType().getId()));
+        blog.setTags(tagService.listTag(blog.getTagIds()));
+
+        Blog b = blogService.saveBlog(blog);
+
+        if (b == null) {
+            attributes.addFlashAttribute("message", "operation failed");
+        } else {
+            attributes.addFlashAttribute("message", "operation success");
+        }
+
+        return "redirect:/admin/blogs";
+
     }
 
 }

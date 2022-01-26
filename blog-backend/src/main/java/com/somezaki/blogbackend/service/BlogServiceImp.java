@@ -1,6 +1,7 @@
 package com.somezaki.blogbackend.service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -20,6 +21,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class BlogServiceImp implements BlogService {
@@ -63,10 +65,18 @@ public class BlogServiceImp implements BlogService {
 
     }
 
+    @Transactional
     public Blog saveBlog(Blog blog) {
+
+        blog.setCreateTime(new Date());
+        blog.setUpdateTime(new Date());
+        blog.setViewTimes(0);
+
         return blogRepository.save(blog);
+
     }
 
+    @Transactional
     public Blog updateBlog(Long id, Blog blog) {
 
         Blog b = blogRepository.getById(id);
@@ -81,6 +91,7 @@ public class BlogServiceImp implements BlogService {
 
     }
 
+    @Transactional
     public void deleteBlog(Long id) {
         blogRepository.deleteById(id);
     }
