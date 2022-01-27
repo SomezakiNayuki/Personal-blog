@@ -54,7 +54,7 @@ public class TagServiceImp implements TagService {
 
         List<Long> list = new ArrayList<>();
 
-        if ("".equals(ids) && ids != null) {
+        if (!"".equals(ids) && ids != null) {
 
             String[] idArray = ids.split(",");
 

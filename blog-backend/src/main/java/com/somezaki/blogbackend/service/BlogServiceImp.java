@@ -33,6 +33,7 @@ public class BlogServiceImp implements BlogService {
         return blogRepository.getById(id);
     }
 
+    @Transactional
     public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
 
         return blogRepository.findAll(new Specification<Blog>() {
@@ -68,9 +69,13 @@ public class BlogServiceImp implements BlogService {
     @Transactional
     public Blog saveBlog(Blog blog) {
 
-        blog.setCreateTime(new Date());
-        blog.setUpdateTime(new Date());
-        blog.setViewTimes(0);
+        if (blog.getId() == null) {
+            blog.setCreateTime(new Date());
+            blog.setUpdateTime(new Date());
+            blog.setViewTimes(0);
+        } else {
+            blog.setUpdateTime(new Date());
+        }
 
         return blogRepository.save(blog);
 

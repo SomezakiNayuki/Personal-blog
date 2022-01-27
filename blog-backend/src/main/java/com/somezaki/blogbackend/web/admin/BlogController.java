@@ -16,6 +16,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -55,6 +56,16 @@ public class BlogController {
         model.addAttribute("types", typeService.listType());
         model.addAttribute("tags", tagService.listTag());
         model.addAttribute("blog", new Blog());
+        return "/admin/blogs-input";
+    }
+
+    @GetMapping("/blogs/{id}/input")
+    public String editInput(@PathVariable Long id, Model model) {
+        model.addAttribute("types", typeService.listType());
+        model.addAttribute("tags", tagService.listTag());
+        Blog b = blogService.getBlog(id);
+        b.init();
+        model.addAttribute("blog", b);
         return "/admin/blogs-input";
     }
 
