@@ -88,4 +88,11 @@ public class BlogController {
 
     }
 
+    @GetMapping("/blogs/{id}/delete")
+    public String delete(@PathVariable Long id, RedirectAttributes attributes) {
+        blogService.deleteBlog(id);
+        attributes.addFlashAttribute("message", "operation success");
+        return "redirect:/admin/blogs";
+    }
+
 }
